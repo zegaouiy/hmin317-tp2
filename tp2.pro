@@ -1,14 +1,18 @@
 INCLUDEPATH += $$PWD
-SOURCES += $$PWD/openglwindow.cpp \
-    gamewindow.cpp
-HEADERS += $$PWD/openglwindow.h \
-    gamewindow.h
+               SOURCES += $$PWD/openglwindow.cpp \
+               gamewindow.cpp \
+  camera.cpp
+               
+               
+               HEADERS += $$PWD/openglwindow.h \
+               gamewindow.h \
+               camera.h
 
-SOURCES += \
-    main.cpp
+  SOURCES += \
+  main.cpp
 
-target.path = .
-INSTALLS += target
+  target.path = .
+  INSTALLS += target
 
-RESOURCES += \
-    gestionnaire.qrc
+  RESOURCES += \
+  gestionnaire.qrc

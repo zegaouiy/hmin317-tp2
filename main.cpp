@@ -28,12 +28,31 @@ int main(int argc, char **argv)
     QSurfaceFormat format;
     format.setSamples(16);
 
-    GameWindow window;
-    window.setFormat(format);
-    window.resize(640, 480);
-    window.show();
+    GameWindow win120(120),win60(60),win30(30),win1(1);
+    win120.setFormat(format);
+    win120.resize(640, 480);
+    win120.show();
 
-    window.setAnimating(true);
+    win120.setAnimating(true);
+    
+    win60.setFormat(format);
+    win60.resize(640, 480);
+    win60.show();
+
+    win60.setAnimating(true);
+    
+    win30.setFormat(format);
+    win30.resize(640, 480);
+    win30.show();
+
+    win30.setAnimating(true);
+
+    win1.setFormat(format);
+    win1.resize(640, 480);
+    win1.show();
+
+    win1.setAnimating(true);
+    
 
     return app.exec();
 }

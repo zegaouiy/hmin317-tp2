@@ -1,0 +1,19 @@
+
+class Camera
+{
+ private : 
+  
+  int etat;
+  float rotX;
+  float rotY;
+  float ss;
+  
+ public : 
+  
+  Camera();
+  cam_render();
+  
+  void set_etat();
+  void set_x(short s);
+  void set_y(short s);
+  void set_ss(short s);

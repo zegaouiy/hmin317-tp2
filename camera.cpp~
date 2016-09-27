@@ -1,0 +1,50 @@
+
+
+Camera::Camera()
+{
+  etat = 0;
+  rot_x = -45.0;
+  rot_y = -45.0;
+  ss = 1.0f;
+}
+  
+Camera::cam_render()
+{
+  glLoadIdentity();
+  glScalef(ss,ss,ss);
+  glRotatef(rotX,1.0f,0.0f,0.0f);
+  glRotatef(rotY,0.0f,0.0f,1.0f);
+
+  switch(etat)
+    {
+    case 0:
+      displayPoints();
+      break;
+    case 1:
+      displayLines();
+      break;
+    case 2:
+      displayTriangles();
+      break;
+    case 3:
+      displayTrianglesC();
+      break;
+    case 4:
+      displayTrianglesTexture();
+      break;
+    case 5:
+
+      displayTrianglesTexture();
+      displayLines();
+      break;
+    default:
+      displayPoints();
+      break;
+    }
+}
+
+
+void set_etat();
+void set_x(short s);
+  void set_y(short s);
+void set_ss(short s);
